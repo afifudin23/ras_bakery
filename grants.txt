@@ -1,0 +1,6 @@
+show grants for "dev"@"localhost";
+revoke all privileges ON *.* from `dev`@`localhost`;
+grant all privileges ON *.* to `dev`@`localhost`;
+
+lsof -i:8000                # list port running
+kill -9 $(lsof -t -i:8000)     # kill port running
